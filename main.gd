@@ -6,8 +6,8 @@ var game_running = false
 
 func _ready():
 	$UI/Gameover.visible = false
-	game_running = true
-	spawn_button()
+	$UI/restart.visible = false
+	$UI/start.visible = true
 
 func spawn_button():
 	if not game_running:
@@ -24,3 +24,18 @@ func spawn_button():
 func on_button_missed():
 	game_running = false
 	$UI/Gameover.visible = true
+	$UI/restart.visible = true
+
+func start_game():
+	game_running = true
+	$UI/Gameover.visible = false
+	$UI/restart.visible = false
+	$UI/start.visible = false
+	spawn_button()
+
+func _on_start_pressed() -> void:
+	start_game()
+
+
+func _on_restart_pressed() -> void:
+	get_tree().reload_current_scene()

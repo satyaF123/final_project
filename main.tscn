@@ -15,3 +15,23 @@ offset_right = 729.0
 offset_bottom = 358.0
 theme_override_font_sizes/font_size = 48
 text = "Game Over!"
+
+[node name="start" type="Button" parent="UI" unique_id=1290133616]
+offset_left = 531.0
+offset_top = 302.0
+offset_right = 612.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 32
+text = "start"
+
+[node name="restart" type="Button" parent="UI" unique_id=2073195474]
+visible = false
+offset_left = 531.0
+offset_top = 365.0
+offset_right = 645.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 32
+text = "restart"
+
+[connection signal="pressed" from="UI/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="UI/restart" to="." method="_on_restart_pressed"]
