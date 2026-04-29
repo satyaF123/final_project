@@ -2,8 +2,10 @@ extends Node2D
 
 var radius = 40.0
 
+signal missed
+
 func _ready():
-	$Timer.wait_time = 15
+	$Timer.wait_time = 2.0
 	$Timer.one_shot = true
 	$Timer.start()
 
@@ -18,4 +20,5 @@ func _input(event):
 				queue_free()
 
 func _on_timer_timeout():
+	missed.emit()
 	queue_free()
