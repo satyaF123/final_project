@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1fbr0jsn4l5h"]
+
+[ext_resource type="Script" uid="uid://cr6ldv6jcqjej" path="res://dissapearingbutton.gd" id="1_j7cac"]
+
+[node name="dissapearingbutton" type="Node2D" unique_id=1024226336]
+script = ExtResource("1_j7cac")
+
+[node name="Timer" type="Timer" parent="." unique_id=1816632197]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
