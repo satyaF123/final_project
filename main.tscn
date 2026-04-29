@@ -33,5 +33,41 @@ offset_bottom = 418.0
 theme_override_font_sizes/font_size = 32
 text = "restart"
 
+[node name="size" type="HSlider" parent="UI" unique_id=1899299997]
+offset_left = 394.0
+offset_top = 377.0
+offset_right = 751.0
+offset_bottom = 521.0
+min_value = 20.0
+max_value = 80.0
+value = 40.0
+
+[node name="time" type="HSlider" parent="UI" unique_id=1329727874]
+offset_left = 394.0
+offset_top = 496.0
+offset_right = 756.0
+offset_bottom = 658.0
+min_value = 1.0
+max_value = 5.0
+value = 2.0
+
+[node name="sizelabel" type="Label" parent="UI" unique_id=818448572]
+offset_left = 471.0
+offset_top = 383.0
+offset_right = 661.0
+offset_bottom = 425.0
+theme_override_font_sizes/font_size = 30
+text = "circle size: 40"
+
+[node name="timelabel" type="Label" parent="UI" unique_id=1542292013]
+offset_left = 500.0
+offset_top = 499.0
+offset_right = 614.0
+offset_bottom = 541.0
+theme_override_font_sizes/font_size = 30
+text = "time: 2s"
+
 [connection signal="pressed" from="UI/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="UI/restart" to="." method="_on_restart_pressed"]
+[connection signal="value_changed" from="UI/size" to="." method="_on_size_value_changed"]
+[connection signal="value_changed" from="UI/time" to="." method="_on_time_value_changed"]

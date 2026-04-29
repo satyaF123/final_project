@@ -1,12 +1,13 @@
 extends Node2D
 
 var radius = 40.0
+var wait_time = 2.0
 
 signal missed
 signal clicked
 
 func _ready():
-	$Timer.wait_time = 2.0
+	$Timer.wait_time = wait_time
 	$Timer.one_shot = true
 	$Timer.start()
 
