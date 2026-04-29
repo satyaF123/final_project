@@ -3,6 +3,7 @@ extends Node2D
 var radius = 40.0
 
 signal missed
+signal clicked
 
 func _ready():
 	$Timer.wait_time = 2.0
@@ -17,6 +18,7 @@ func _input(event):
 		if event.pressed:
 			var distance = global_position.distance_to(event.global_position)
 			if distance <= radius:
+				clicked.emit()
 				queue_free()
 
 func _on_timer_timeout():

@@ -20,11 +20,16 @@ func spawn_button():
 	)
 	b.missed.connect(on_button_missed)
 	add_child(b)
+	b.clicked.connect(on_button_clicked)
+	add_child(b)
 
 func on_button_missed():
 	game_running = false
 	$UI/Gameover.visible = true
 	$UI/restart.visible = true
+
+func on_button_clicked():
+	spawn_button()
 
 func start_game():
 	game_running = true
