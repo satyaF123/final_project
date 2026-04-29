@@ -31,7 +31,6 @@ func spawn_button():
 	add_child(b)
 
 func on_button_clicked():
-	play_random_note()
 	spawn_button()
 
 func on_button_missed():
@@ -67,8 +66,6 @@ func _on_time_value_changed(value: float) -> void:
 	button_time = value
 	$UI/timelabel.text = "Time: " + str(snappedf(value, 0.1)) + "s"
 	
-func play_random_note():
-	$AudioStreamPlayer2D.pitch_scale = randf_range(0,1.2)
-	$AudioStreamPlayer2D.play()
+
 	
 	
