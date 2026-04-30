@@ -37,3 +37,18 @@
 | piano2.wav | [source](https://freesound.org/people/MGFaudio/sounds/634413) |
 | piano3.wav | [source](https://freesound.org/people/MGFaudio/sounds/634399) |
 | blackbackground | [source](black-screen-background.png) |
+
+
+# References 
+- [godot_tutorial](https://www.youtube.com/watch?v=TLG2yVpLDT8)
+- [godot_documentation](https://docs.godotengine.org/en/stable/about/introduction.html)
+- [freesound](https://freesound.org)
+
+# Conclusion
+
+## what im most proud of
+- I am proud of the techniques i've implemented creating this program that ive learned from the labs and various tutorials online
+
+## what i've learnt
+- this project was on the simpler side , i decided to create a safe and easy game to avoid risk of over complication or the project taking too long , the few things that i've learnt making this project was : using audiostreamplayer node to play .wav files
+- preloading instances using preload() and instantiating using instantiate()
