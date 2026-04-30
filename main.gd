@@ -31,6 +31,8 @@ func spawn_button():
 	add_child(b)
 
 func on_button_clicked():
+	$Soundplayer.pitch_scale = randf_range(0.5, 2.0)
+	$Soundplayer.play()
 	spawn_button()
 
 func on_button_missed():
