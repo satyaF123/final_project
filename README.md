@@ -8,8 +8,8 @@
 
 ## Screenshots
 
-![Screenshot 1](screenshots/git1.png)
+![Screenshot 1](screenshots/git1.PNG)
 
-![Screenshot 2](screenshots/git2.png)
+![Screenshot 2](screenshots/git2.PNG)
 
-![Screenshot 3](screenshots/git3.png)
+![Screenshot 3](screenshots/git3.PNG)
