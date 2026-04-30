@@ -5,8 +5,10 @@ const DisappearButton = preload("res://dissapearingbutton.tscn")
 var game_running = false
 var circle_size = 40.0
 var button_time = 2.0
+var score = 0
 
 func _ready():
+	$UI/score.visible = false
 	$UI/Gameover.visible = false
 	$UI/restart.visible = false
 	$UI/start.visible = true
@@ -31,6 +33,8 @@ func spawn_button():
 	add_child(b)
 
 func on_button_clicked():
+	score = score + 1
+	$UI/score.text = "score: " + str(score)
 	$Soundplayer.volume_db = 0
 	$Soundplayer.play()
 
@@ -49,6 +53,7 @@ func on_button_missed():
 
 func start_game():
 	game_running = true
+	$UI/score.visible = true
 	$UI/Gameover.visible = false
 	$UI/restart.visible = false
 	$UI/start.visible = false

@@ -69,11 +69,19 @@ offset_bottom = 541.0
 theme_override_font_sizes/font_size = 30
 text = "time: 2s"
 
+[node name="score" type="Label" parent="UI" unique_id=2125338553]
+offset_left = 516.0
+offset_top = 22.0
+offset_right = 632.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 28
+text = "score: 0"
+
 [node name="Soundplayer" type="AudioStreamPlayer" parent="." unique_id=1175934698]
 stream = ExtResource("2_0xm2m")
 
 [node name="BlackScreenBackground" type="Sprite2D" parent="." unique_id=1557260151]
-position = Vector2(578.5, 325.49997)
+position = Vector2(576, 322.00003)
 scale = Vector2(1.1220703, 0.63183594)
 texture = ExtResource("3_h2yge")
 
