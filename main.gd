@@ -31,9 +31,16 @@ func spawn_button():
 	add_child(b)
 
 func on_button_clicked():
+	$Soundplayer.volume_db = 0
+	$Soundplayer.play()
+
+	spawn_button()
+
+	await get_tree().create_timer(0.2).timeout
+
+	$Soundplayer.volume_db = -10
 	$Soundplayer.pitch_scale = randf_range(0.5, 2.0)
 	$Soundplayer.play()
-	spawn_button()
 
 func on_button_missed():
 	game_running = false
