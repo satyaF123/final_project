@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cim20u3goqpe2"]
 
 [ext_resource type="Script" uid="uid://dei6rpvxi6o4b" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="AudioStream" uid="uid://bsnmgkfy54y0h" path="res://panio1.wav" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cxyj400kgj5s2" path="res://black-screen-background.png" id="3_h2yge"]
 
 [node name="main" type="Node2D" unique_id=1918593358]
@@ -78,7 +77,6 @@ theme_override_font_sizes/font_size = 28
 text = "score: 0"
 
 [node name="Soundplayer" type="AudioStreamPlayer" parent="." unique_id=1175934698]
-stream = ExtResource("2_0xm2m")
 
 [node name="BlackScreenBackground" type="Sprite2D" parent="." unique_id=1557260151]
 position = Vector2(576, 322.00003)

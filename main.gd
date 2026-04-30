@@ -6,8 +6,16 @@ var game_running = false
 var circle_size = 40.0
 var button_time = 2.0
 var score = 0
+var sounds = []
+
 
 func _ready():
+	sounds = [load("res://indo2.wav"),
+		load("res://indo3.wav"),
+		load("res://indo4.wav"),
+		load("res://panio1.wav"),
+		load("res://piano2.wav"),
+		load("res://piano3.wav")]
 	$UI/score.visible = false
 	$UI/Gameover.visible = false
 	$UI/restart.visible = false
@@ -32,12 +40,12 @@ func spawn_button():
 	b.clicked.connect(on_button_clicked)
 	add_child(b)
 
-func on_button_clicked():
+func on_button_clicked(index):
 	score = score + 1
 	$UI/score.text = "score: " + str(score)
-	$Soundplayer.volume_db = 0
+	$Soundplayer.stream = sounds[index]
+	$Soundplayer.pitch_scale = randf_range(0.8, 1.2)
 	$Soundplayer.play()
-
 	spawn_button()
 
 	await get_tree().create_timer(0.2).timeout
