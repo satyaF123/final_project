@@ -76,10 +76,18 @@ offset_bottom = 66.0
 theme_override_font_sizes/font_size = 28
 text = "score: 0"
 
+[node name="Title" type="Label" parent="UI" unique_id=560383411]
+offset_left = 342.0
+offset_top = 134.0
+offset_right = 822.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 58
+text = "clicker game v1.0"
+
 [node name="Soundplayer" type="AudioStreamPlayer" parent="." unique_id=1175934698]
 
 [node name="BlackScreenBackground" type="Sprite2D" parent="." unique_id=1557260151]
-position = Vector2(576, 322.00003)
+position = Vector2(575.99994, 325.00006)
 scale = Vector2(1.1220703, 0.63183594)
 texture = ExtResource("3_h2yge")
 

@@ -16,6 +16,7 @@ func _ready():
 		load("res://panio1.wav"),
 		load("res://piano2.wav"),
 		load("res://piano3.wav")]
+	$UI/Title.visible = true
 	$UI/score.visible = false
 	$UI/Gameover.visible = false
 	$UI/restart.visible = false
@@ -40,10 +41,10 @@ func spawn_button():
 	b.clicked.connect(on_button_clicked)
 	add_child(b)
 
-func on_button_clicked(index):
+func on_button_clicked(i):
 	score = score + 1
 	$UI/score.text = "score: " + str(score)
-	$Soundplayer.stream = sounds[index]
+	$Soundplayer.stream = sounds[i]
 	$Soundplayer.pitch_scale = randf_range(0.8, 1.2)
 	$Soundplayer.play()
 	spawn_button()
@@ -61,6 +62,7 @@ func on_button_missed():
 
 func start_game():
 	game_running = true
+	$UI/Title.visible = false
 	$UI/score.visible = true
 	$UI/Gameover.visible = false
 	$UI/restart.visible = false
