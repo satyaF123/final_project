@@ -39,7 +39,7 @@ func on_button_clicked():
 	await get_tree().create_timer(0.2).timeout
 
 	$Soundplayer.volume_db = -10
-	$Soundplayer.pitch_scale = randf_range(0.5, 2.0)
+	$Soundplayer.pitch_scale = randf_range(0.5, 2.5)
 	$Soundplayer.play()
 
 func on_button_missed():
