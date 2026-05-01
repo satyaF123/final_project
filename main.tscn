@@ -49,7 +49,7 @@ offset_top = 496.0
 offset_right = 756.0
 offset_bottom = 658.0
 min_value = 1.0
-max_value = 5.0
+max_value = 10.0
 value = 2.0
 
 [node name="sizelabel" type="Label" parent="UI" unique_id=818448572]

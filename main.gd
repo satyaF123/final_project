@@ -31,10 +31,7 @@ func spawn_button():
 		return
 	var b = DisappearButton.instantiate()
 	var screen = get_viewport_rect().size
-	b.position = Vector2(
-		randf_range(50, screen.x - 50),
-		randf_range(50, screen.y - 50)
-	)
+	b.position = Vector2(randf_range(50, screen.x - 50),randf_range(50, screen.y - 50))
 	b.radius = circle_size
 	b.wait_time = button_time
 	b.missed.connect(on_button_missed)
